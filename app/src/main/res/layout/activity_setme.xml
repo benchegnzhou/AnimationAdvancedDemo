@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    android:orientation="vertical"
+    tools:context="china.test.meui.SetMeActivity">
+    <!--xmlns:ztsc="http://schemas.android.com/apk/res/china.test.customview.CircleImageView"-->
+
+
+    <!--头布局-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:background="@color/apptheme">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="36px"
+            android:paddingRight="60px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_common_title_back" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_tittle"
+            style="@style/app_top_common_title_stytle"
+            android:text="个人信息" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/test_rl"
+        android:layout_width="match_parent"
+        android:layout_height="216px"
+        android:background="#fff"
+        android:paddingLeft="36px"
+        android:paddingRight="36px">
+
+
+        <com.ztsc.house.customview.CircleImageView
+            android:id="@+id/me_usericon"
+            android:layout_width="144px"
+            android:layout_height="144px"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/testicon"
+            circle:border_color="#22cccccc"
+            circle:border_width="1px" />
+        <!--more-->
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+        <TextView
+            style="@style/style_setme_tv_msg"
+            android:layout_toLeftOf="@id/iv1"
+            android:text="更改头像"
+            />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/setme_nice_rl"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="20px"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="36px"
+        android:paddingRight="36px">
+
+        <TextView
+            style="@style/style_setme_text"
+            android:text="昵称" />
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/setme_nicename_tv"
+            style="@style/style_setme_tv_msg"
+            android:layout_toLeftOf="@id/iv2"
+            android:text="我不吃药我要萌萌哒" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/setme_sex_rl"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="1px"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="36px"
+        android:paddingRight="36px">
+
+
+        <TextView
+            style="@style/style_setme_text"
+            android:text="性别" />
+        <!--more-->
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+        <TextView
+            android:id="@+id/setme_sex_tv"
+            style="@style/style_setme_tv_msg"
+            android:layout_toLeftOf="@id/iv3"
+            android:text="男" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_setme_birth"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="1px"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="36px"
+        android:paddingRight="36px">
+
+
+        <TextView
+            style="@style/style_setme_text"
+            android:text="生日" />
+        <!--more-->
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+        <TextView
+            android:id="@+id/setme_sex_tv"
+            style="@style/style_setme_tv_msg"
+            android:layout_toLeftOf="@id/iv4"
+            android:text="1994-02-04" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_setme_signature"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="20px"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="36px"
+        android:paddingRight="36px">
+
+
+        <TextView
+            style="@style/style_setme_text"
+            android:text="个性签名" />
+        <!--more-->
+        <ImageView
+            android:id="@+id/iv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+        <TextView
+            android:id="@+id/setme_sex_tv"
+            style="@style/style_setme_tv_msg"
+            android:layout_toLeftOf="@id/iv5"
+            android:text="设置个性签名" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_setme_hometown"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="1px"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="36px"
+        android:paddingRight="36px">
+
+
+        <TextView
+            style="@style/style_setme_text"
+            android:text="故乡" />
+        <!--more-->
+        <ImageView
+            android:id="@+id/iv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+        <TextView
+            android:id="@+id/setme_sex_tv"
+            style="@style/style_setme_tv_msg"
+            android:layout_toLeftOf="@id/iv6"
+            android:text="布吉岛" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/setme_telnum_rl"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="20px"
+        android:background="#FFF"
+        android:paddingLeft="36px"
+        android:paddingRight="36px">
+
+        <TextView
+            style="@style/style_setme_text"
+            android:text="联系方式" />
+
+
+        <!--more-->
+        <ImageView
+            android:id="@+id/iv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+        <TextView
+            android:id="@+id/setme_telnum_tv"
+            style="@style/style_setme_tv_msg"
+            android:layout_toLeftOf="@id/iv7"
+            android:text="1525454545" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/setme_myaddress_rl"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="1px"
+        android:background="#FFFFFF"
+
+        android:paddingLeft="36px"
+        android:paddingRight="36px"
+        >
+
+        <TextView
+            style="@style/style_setme_text"
+            android:text="我的地址" />
+        <!--more-->
+        <ImageView
+            android:id="@+id/iv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/tv_address1"
+            style="@style/style_setme_tv_msg"
+            android:layout_toLeftOf="@id/iv8"
+            android:text="北京市海淀区" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/chat_btn_send"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:text="退出登录"
+        android:textColor="#fff"
+        android:visibility="gone"
+        />
+    <Button
+        android:id="@+id/btn_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/chat_btn_send"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:text="立即体验"
+        android:textColor="#fff"
+        android:visibility="gone"
+        />
+</com.zhy.autolayout.AutoLinearLayout>
+
+
+
+

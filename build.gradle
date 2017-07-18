@@ -1,0 +1,53 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+
+
+        //下面的两行和图片压缩框架tiny有关 ，他需要配合图片压缩库tiny 一同使用
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+
+
+        //  日志调试工具的插件依赖
+//        classpath 'com.wolearn:ajcplugin:1.0.1'
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://esri.bintray.com/arcgis'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//各个项目工程版本的全局配置
+ext {
+    versionCode = 26
+    versionName_okgo = '3.0.2'
+    versionName_okserver = '2.0.2'
+    versionName_okrx = '1.0.2'
+    versionName_okrx2 = '2.0.2'
+
+    libMinSdkVersion = 14
+    appMinSdkVersion = 16
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.2'
+    supportVersion = '25.3.1'
+}

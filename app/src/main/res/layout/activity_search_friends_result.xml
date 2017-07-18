@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_me_my_conversation_add_friends_same_town"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="china.test.meui.SearchFriendsResultActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:background="@color/apptheme">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="36px"
+            android:paddingRight="60px">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_common_title_back" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/app_top_common_title_stytle"
+            android:text="同小区的人" />
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="36px"
+            android:src="@drawable/ucrop_ic_reset" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_search_result_friends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar"
+        android:background="#FEFEFE"></ListView>
+</com.zhy.autolayout.AutoRelativeLayout>

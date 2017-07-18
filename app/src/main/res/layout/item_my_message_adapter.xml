@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?><com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingBottom="1dp"
+    app:ios="false"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+<!--<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="226px">-->
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_context"
+        android:layout_width="match_parent"
+        android:layout_height="226px"
+        android:layout_marginBottom="2px"
+        android:background="#fff"
+        android:paddingBottom="30px"
+        android:paddingLeft="36px"
+        android:paddingRight="36px"
+        android:paddingTop="30px">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_icon_message"
+            android:layout_width="164px"
+            android:layout_centerVertical="true"
+            android:layout_height="164px">
+
+            <china.test.customview.CircleImageView
+                android:id="@+id/iv_icon_message"
+                android:layout_width="154px"
+                android:layout_height="154px"
+                android:layout_centerInParent="true"
+                android:src="@drawable/default_icon" />
+
+            <ImageView
+                android:id="@+id/tv_circle_img"
+                android:layout_width="48px"
+                android:layout_height="50px"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/message_dot_shape" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="140px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="200px"
+            android:layout_toRightOf="@id/rl_icon_message">
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="系统消息"
+                android:textColor="#4E4E4E"
+                android:textSize="44px" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="打团战，不要浪"
+                android:textColor="#B2B2B2"
+                android:textSize="40px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_createtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="上午 10:20"
+            android:textColor="#B2B2B2"
+            android:textSize="40px" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="226px"
+        android:layout_height="match_parent"
+        android:background="@color/apptheme"
+        android:text="删除"
+
+        android:textColor="@android:color/white" />
+    <!--</com.zhy.autolayout.AutoRelativeLayout>-->
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>

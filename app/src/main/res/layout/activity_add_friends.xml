@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_friends"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:background="@color/apptheme"
+        >
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="36px"
+            android:paddingRight="60px">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_common_title_back" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+        <TextView
+            android:text="搜索"
+            style="@style/app_top_common_title_stytle"
+            />
+    </RelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_below="@id/rl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn_request"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:text="搜  索"
+            android:background="@drawable/addhouse_btn"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_margin="15dp"
+            android:layout_alignParentRight="true"
+            />
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@id/btn_request"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/addhouse_et"
+            android:paddingLeft="10dp"
+            android:hint="手机号" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</RelativeLayout>

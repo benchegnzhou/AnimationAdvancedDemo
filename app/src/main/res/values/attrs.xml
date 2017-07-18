@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 注意 -->
+    <!-- value:不要写成 values-->
+    <!-- string:不要写成 String-->
+
+    <declare-styleable name="SettingItemView">
+        <!-- 用来控制显示的背景图 -->
+        <attr name="backgroundres">
+            <enum name="first" value="0" />
+            <enum name="middle" value="1" />
+            <enum name="last" value="2" />
+        </attr>
+
+        <!-- 用来控制显示的文字 -->
+        <attr name="shoptitle" format="string" />
+        <!-- 用来控制是否显示开关 -->
+        <attr name="shopnum" format="integer" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RatioImageView">
+        <attr name="ratio" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="NineGridLayout">
+        <attr name="sapcing" format="dimension"/>
+    </declare-styleable>
+
+    <!--自定义的圆角矩形控件的属性-->
+    <declare-styleable name="CustomImageView">
+
+        <attr name="borderRadius" format="dimension" />
+        <attr name="type">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <attr name="src" format="reference"></attr>
+    </declare-styleable>
+
+
+    <!--圆角图片imageview-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+</resources>

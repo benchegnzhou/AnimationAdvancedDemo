@@ -1,0 +1,696 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--app通用一级标题文字色值大小样式-->
+    <style name="app_top_tltle_parent_common_stytle">
+        <item name="android:textColor">#ffff</item>
+        <item name="android:textSize">54px</item>
+    </style>
+
+
+    <!--app通用一级标题文字色值大小样式-->
+    <style name="app_top_tltle_common_stytle" parent="app_top_tltle_parent_common_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <!--app通用一级标题右侧文字样式-->
+    <style name="app_top_tltle_right_parent_common_stytle">
+        <item name="android:textColor">#ffff</item>
+        <item name="android:textSize">48px</item>
+    </style>
+
+
+    <!--app通用一级标题右侧文字样式-->
+    <style name="app_top_tltle_right_common_stytle" parent="app_top_tltle_right_parent_common_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <!--app通用标题栏根布局样式-->
+    <style name="app_top_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">156px</item>
+        <item name="android:background">@color/apptheme</item>
+    </style>
+
+    <!--周边服务左侧提示文字大小样式-->
+    <style name="surrounding_hint_tittle_left">
+        <item name="android:textColor">#4e4e4e</item>
+        <item name="android:textSize">46px</item>
+    </style>
+
+    <!--周边服务右侧内容文字大小样式-->
+    <style name="surrounding_content_left">
+        <item name="android:textColor">#757575</item>
+        <item name="android:textSize">40px</item>
+        <item name="android:textColorHint">#b2b2b2</item>
+
+    </style>
+
+
+    <!--App总标题文字样式-->
+    <style name="app_top_common_title_stytle" parent="app_top_tltle_parent_common_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+
+    </style>
+
+
+    <style name="SetMe_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:background">@drawable/ll_customer_selector</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="SetMe_text">
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/colorblack</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="SetMe_arrows">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:src">@color/colorPrimary</item>
+    </style>
+
+    <style name="SetMe_View">
+        <item name="android:background">@color/colorblack</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="surroundings_View">
+        <item name="android:background">@color/colorgray</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="surroundbtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/colorlucency</item>
+        <item name="android:layout_margin">1dp</item>
+    </style>
+
+    <style name="find_7_button">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/colorlucency</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginRight">3dp</item>
+    </style>
+
+    <style name="surroundbtn_text_up">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/colorlucency</item>
+
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/menushow</item>
+        <item name="android:windowExitAnimation">@anim/menuhide</item>
+    </style>
+
+
+    <!--最底部导航图风格-->
+    <style name="home_tab_image_style">
+        <item name="android:padding">0px</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">64px</item>
+        <item name="android:layout_height">64px</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+
+    <!--最底部导航文字风格-->
+    <style name="home_tab_text_style">
+        <item name="android:textColor">@color/colorgray</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">16px</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--登录按钮的style-->
+    <style name="btn_login_style">
+        <item name="android:textColor">@color/login_btn_textcolor</item>
+        <item name="android:background">@drawable/chat_btn_send</item>
+    </style>
+
+    <style name="me_setting_left_text_style">
+        <item name="android:layout_marginLeft">36px</item>
+        <item name="android:textSize">42px</item>
+        <item name="android:textColor">#4e4e4e</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!--下面是自定义的dialog的样式 用于更换头像样式使用-->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <!--上面是自定义的dialog的样式-->
+
+
+    <!--拍照裁剪的dialog-->
+    <style name="selecting_photograph_dialog_bt">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#fa193e</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="line_least_eeeeee">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#eeeeee</item>
+    </style>
+
+
+    <!--性别选择dialog-->
+    <style name="AddressDialog" parent="@android:style/Theme.Dialog">
+        <!-- 设置dialog的背景为白色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!-- 边框 @null不设置 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否覆盖内容 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 动画执行样式 -->
+        <item name="android:windowAnimationStyle">@null</item>
+
+        <!-- 是否设置显示window阴影 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置透明透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是不是显示标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 点击空白处是不是取消dialog -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+
+    <!--我的设置标题信息文字-->
+    <style name="style_setme_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">44px</item>
+        <item name="android:textColor">#4e4e4e</item>
+    </style>
+
+
+    <!--我的设置个人信息内容文字-->
+    <style name="style_setme_tv_msg">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">#b2b2b2</item>
+        <item name="android:textSize">38px</item>
+        <item name="android:layout_marginRight">20px</item>
+    </style>
+
+
+    <!-- 线 5 #f5f5f5-->
+    <style name="line_least_f5f5f5">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">#b3b3b3</item>
+    </style>
+
+    <style name="line_least_f5f5f512">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:background">#eeeeee</item>
+    </style>
+
+
+    <!--自定义的dialog-->
+    <style name="CallSecurityDialog" parent="@android:style/Theme.Dialog">
+        <!-- 设置dialog的内容背景，内容后面的黑边框 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置dialog的内容前景，在前景前的遮罩  -->
+        <item name="android:background">#00000000</item>
+        <!-- 边框 @null不设置 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否覆盖内容 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 动画执行样式 -->
+        <item name="android:windowAnimationStyle">@null</item>
+
+        <!-- 是否设置显示window阴影 -->
+        <!-- 是否背景模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 设置背景模糊的透明度-->
+        <item name="android:backgroundDimAmount">0.5</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+
+
+    </style>
+
+
+    <!--主界面跳转入口文字样式-->
+
+    <style name="home_fragment_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:textColor">#FF1E1E1E</item>
+        <item name="android:layout_marginTop">30px</item>
+    </style>
+    <!--二手物品主界面文字样式-->
+
+    <style name="secondhand_main_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:textColor">#FF1E1E1E</item>
+        <item name="android:layout_marginTop">30px</item>
+    </style>
+
+    <!--主界面跳转入口小图标的样式-->
+
+    <style name="home_fragment_icon_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!--二手物品主界面小图标的样式-->
+
+    <style name="secondhand_main_icon_style">
+        <item name="android:layout_width">112px</item>
+        <item name="android:layout_height">112px</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+
+    <!--主界面二级界面城市选择样式-->
+
+    <style name="home_seach_sity_style_tag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20px</item>
+        <item name="android:layout_marginTop">20px</item>
+        <item name="android:textColor">#8000</item>
+        <item name="android:textSize">40px</item>
+    </style>
+
+    <style name="home_seach_sity_style_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20px</item>
+        <item name="android:layout_marginTop">20px</item>
+        <item name="android:background">#4FFF</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:paddingLeft">40px</item>
+        <item name="android:paddingRight">40px</item>
+        <item name="android:paddingBottom">20px</item>
+        <item name="android:paddingTop">20px</item>
+        <item name="android:textSize">45px</item>
+    </style>
+
+
+    <!--周边服务找服务去帮忙字体样式-->
+    <style name="surrounding_top_tittle_style">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#fff</item>
+        <!--<item name="android:layout_weight">1</item>-->
+        <item name="android:textSize">40px</item>
+        <!--<item name="android:background">@color/colorWhiteGray</item>-->
+    </style>
+
+    <!--二手物品搜索结果筛选-->
+    <style name="secondhandsearchresultsortanimation">
+        <item name="android:windowEnterAnimation">@anim/top_in</item>
+        <item name="android:windowExitAnimation">@anim/top_out</item>
+    </style>
+
+
+    <!--我的服务订单 —— 购买服务订单详情文字大小和颜色样式-->
+    <style name="my_service_buy_tv_size">
+        <item name="android:textColor">#b22b2b2b</item>
+        <item name="android:textSize">50px</item>
+    </style>
+
+
+    <!-- <item name="android:textColor">#b22b2b2b</item>
+     <item name="android:textSize">50px</item>-->
+    <!--我的服务订单 —— 购买服务订单详情文字样式-->
+    <style name="my_service_buy_tv_stytle" parent="my_service_buy_tv_size">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">36px</item>
+        <item name="android:textSize">44px</item>
+        <item name="android:textColor">#4e4e4e</item>
+
+    </style>
+
+    <!--我的服务订单 —— 购买服务订单详情分割线样式-->
+    <style name="my_service_buy_line_stytle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">10px</item>
+        <item name="android:layout_marginRight">10px</item>
+        <item name="android:background">#b2b2b2</item>
+    </style>
+
+
+    <!--物业模块 ———— 首页图标样式-->
+    <style name="caomunity_index_icon_stytle">
+        <item name="android:layout_width">128px</item>
+        <item name="android:layout_height">128px</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!--物业模块 ———— 首页标题文字样式-->
+    <style name="caomunity_index_tittle_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#a000</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:layout_marginTop">20px</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!--房屋租赁发布信息文字样式-->
+    <style name="home_house_rent_tittle_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">44px</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">#4e4e4e</item>
+        <item name="android:layout_marginLeft">36px</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">38px</item>
+    </style>
+
+    <style name="HomeTabLayoutTextStyle">
+        <item name="android:textSize">48px</item>
+    </style>
+
+
+    <style name="LoginTabLayoutTextStyle">
+        <item name="android:textSize">44px</item>
+    </style>
+
+    <!--房屋租赁发布信息房屋特征样式-->
+    <style name="home_house_rent_character_stytle">
+        <item name="android:layout_height">54px</item>
+        <item name="android:layout_marginBottom">30px</item>
+        <item name="android:layout_marginRight">30px</item>
+        <item name="android:background">@drawable/rent_house_character_unselect_shape</item>
+        <item name="android:textColor">@color/apptheme</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">36px</item>
+    </style>
+    <!--求购的流式布局中的按钮的样式-->
+    <style name="i_want_buy_second_hand_thing_flwo_textview">
+        <item name="android:layout_height">54px</item>
+        <item name="android:layout_marginBottom">30px</item>
+        <item name="android:layout_marginRight">30px</item>
+        <item name="android:background">@drawable/rent_house_character_unselect_shape</item>
+        <item name="android:textColor">@color/apptheme</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--求购左侧字体文字样式-->
+    <style name="home_house_i_wangt_buy_secondhand_thing_tittle_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">42px</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">#4e4e4e</item>
+        <item name="android:layout_marginLeft">36px</item>
+    </style>
+    <!--二手物品发布左侧字体文字样式-->
+    <style name="secondhand_thing_release_left_text_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">42px</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">#4e4e4e</item>
+        <item name="android:layout_marginLeft">36px</item>
+    </style>
+
+
+    <!--单选按钮style-->
+    <style name="checkbox_style">
+        <item name="android:layout_width">60px</item>
+        <item name="android:layout_height">38px</item>
+    </style>
+    <!--房屋租赁发布信息右侧文字样式-->
+    <style name="home_house_rent_right_stytle">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">#fff</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">#b2b2b2</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+    <!--二手物品发布信息右侧文字样式-->
+    <style name="secondhand_thing_release_right_text_stytle">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">#fff</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">#b2b2b2</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <!--房屋求组发布信息右侧文字样式-->
+    <style name="home_house_i_wangt_rent_right_stytle">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">#fff</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">#b2b2b2</item>
+        <item name="android:layout_marginLeft">20px</item>
+    </style>
+
+    <!--房屋租赁发布信息右侧单选按钮样式-->
+    <style name="home_house_rent_right_radiogroup_stytle">
+        <item name="android:background">#fff</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">36px</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--房屋租赁发布信息右侧单选按钮样式-->
+    <style name="home_house_rent_right_radiobutton_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:textColor">@drawable/radiobutton_textcolor_selector</item>
+        <item name="android:layout_marginRight">60px</item>
+        <item name="android:drawableLeft">@drawable/check_box_selector</item>
+        <item name="android:drawablePadding">20px</item>
+        <item name="android:button">@null</item>
+    </style>
+    <!--首页查看更多按钮样式-->
+    <style name="home_title_right_more_stytle">
+        <item name="android:layout_width">96px</item>
+        <item name="android:layout_height">44px</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">#b2b2b2</item>
+        <item name="android:textSize">20px</item>
+    </style>
+
+
+    <!--社区生活缴费图片的样式-->
+    <style name="community_life_pay_icon_stytle">
+        <item name="android:layout_width">90px</item>
+        <item name="android:layout_height">90px</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!--我的界面的菜单文字样式-->
+    <style name="aboutme_menu_text_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">44px</item>
+        <item name="android:textColor">#4e4e4e</item>
+    </style>
+
+    <!--社区生活缴费缴费类型的样式-->
+    <style name="community_life_pay_type_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#2b2b2b</item>
+        <item name="android:textSize">42px</item>
+    </style>
+
+
+    <!--社区生活缴费缴费人信息的样式-->
+    <style name="community_life_pay_user_message_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#8e2b2b2b</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:layout_marginTop">16px</item>
+    </style>
+
+    <!--社区生活缴费添加账号文字的样式-->
+    <style name="community_life_pay_tv_add_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#822b2b2b</item>
+        <item name="android:textSize">30px</item>
+        <item name="android:layout_margin">20px</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--社区生活缴费添加账号图片的样式-->
+    <style name="community_life_pay_iv_add_stytle">
+        <item name="android:layout_width">60px</item>
+        <item name="android:layout_height">60px</item>
+        <item name="android:layout_marginLeft">10px</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <!--周边服务下单确认界面提示文字样式-->
+    <style name="surrounding_service_buy_hint_tv_stytle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#b22b2b2b</item>
+        <item name="android:textSize">45px</item>
+    </style>
+
+    <style name="Comment" parent="android:TextAppearance">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+    <!--分割线通用填充色-->
+    <style name="commonLineColorStyle">
+        <item name="android:background">#FFE8E8E8</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+    </style>
+
+    <style name="tv_42_4e4e4e">
+        <item name="android:textColor">#ff4e4e4e</item>
+        <item name="android:textSize">44px</item>
+    </style>
+
+    <style name="tv_48_4e4e4e">
+        <item name="android:textColor">#ff4e4e4e</item>
+        <item name="android:textSize">50px</item>
+    </style>
+
+    <style name="dialog_uploading">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 背景透明 -->
+        <!-- 激活背景变暗遮罩 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+
+    <!--物业服务发布类提示文字通用-->
+    <style name="community_publish_name_title_hite">
+        <item name="android:textColor">#4e4e4e</item>
+        <item name="android:textSize">44px</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--物业服务发布类提示文字通用-->
+    <style name="community_publish_context_common">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">42px</item>
+        <item name="android:textColor">#757575</item>
+        <item name="android:textColorHint">#b2b2b2</item>
+    </style>
+
+    <!-- 物业服务 首页padding样式 -->
+
+    <style name="community_index_padding_common">
+        <item name="android:paddingTop">60px</item>
+        <item name="android:paddingBottom">60px</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+    <style name="community_index_padding_top_60px">
+        <item name="android:paddingTop">60px</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="home_index_padding_top_bottom_30px">
+        <item name="android:paddingTop">30px</item>
+        <item name="android:paddingBottom">30px</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+
+
+</resources>

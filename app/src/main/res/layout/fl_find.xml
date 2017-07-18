@@ -1,0 +1,492 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/backgroud_58"
+    tools:context="china.test.fragment.CommunityFragment">
+
+    <include
+        android:id="@+id/find_title"
+        layout="@layout/layout_backtitle"></include>
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+  <LinearLayout
+      android:id="@+id/c_58_daojia2_1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+
+      <!--
+ <LinearLayout
+     android:id="@+id/c_58_daojia_1"
+     android:layout_width="fill_parent"
+     android:layout_height="40dp"
+     android:orientation="horizontal"
+     >
+  <Spinner
+      android:id="@+id/find_sp_citqy"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"/>
+  <EditText
+      android:id="@+id/search_et_conditiqon"
+      android:hint="@string/search_condition"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      />
+  <Button
+      android:id="@+id/search_btn_seaqrch"
+      android:text="@string/search"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent" />
+ </LinearLayout>
+
+
+  <LinearLayout
+      android:id="@+id/c_58_daojia"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <Spinner
+            android:id="@+id/find_sp_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/search_et_condition"
+            android:hint="@string/search_condition"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/search_btn_search"
+            android:text="@string/search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+-->
+ <TableLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentStart="true"
+     android:layout_marginTop="5dp"
+     android:background="@color/colorwhite">
+
+  <TableRow
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp">
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_1_chongwu"
+       android:scaleType="fitXY"
+       android:text="全职招聘"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+
+       />
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_2_jiazheng"
+       android:scaleType="fitXY"
+       android:text="兼职"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_3_jianzhi"
+       android:text="宠物"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_4_bendi"
+       android:text="家政"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_5_fuli"
+       android:text="本地服务"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+  </TableRow>
+
+  <TableRow
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp">
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_6_ershouche"
+       android:text="志愿者活动"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_7_ershouwupin"
+       android:text="福利工作"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_8_baomu"
+       android:text="保姆"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_9_weixiu"
+       android:text="维修"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+
+   <Button
+       style="@style/surroundbtn"
+       android:drawableTop="@mipmap/find_10_gengduo"
+       android:text="更多"
+       android:textSize="13dp"
+       android:drawablePadding="10dp"
+       />
+  </TableRow>
+ </TableLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <android.support.v4.view.ViewPager
+              android:id="@+id/demo_viewpager_id"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_margin="5dp">
+
+          </android.support.v4.view.ViewPager>
+      </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="1dp"
+       android:background="@color/colorwhite">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginLeft="10dp"
+                android:text="58到家"
+                android:gravity="center_vertical"           />
+   </LinearLayout>
+   <HorizontalScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+       android:scrollbars="none"
+       android:background="@color/colorwhite">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+
+        >
+
+        <Button
+            style="@style/find_7_button"
+            android:drawableBottom="@mipmap/find_7_1"
+            android:text="家庭保洁"
+            android:textSize="13dp"
+
+           />
+
+        <Button
+            style="@style/find_7_button"
+            android:drawableBottom="@mipmap/find_7_2"
+            android:text="月嫂"
+            android:textSize="13dp"
+
+            />
+
+        <Button
+         style="@style/find_7_button"
+         android:drawableBottom="@mipmap/find_7_3"
+         android:text="保姆"
+         android:textSize="13dp"
+
+            />
+     <Button
+         style="@style/find_7_button"
+         android:drawableBottom="@mipmap/find_7_4"
+         android:text="维修服务"
+         android:textSize="13dp"
+
+         />
+     <Button
+         style="@style/find_7_button"
+         android:drawableBottom="@mipmap/find_7_5"
+         android:text="搬家"
+         android:textSize="13dp"
+
+         />
+     <Button
+         style="@style/find_7_button"
+         android:drawableBottom="@mipmap/find_7_4"
+         android:text="育儿嫂"
+         android:textSize="13dp"
+
+         />
+     <Button
+         style="@style/find_7_button"
+         android:drawableBottom="@mipmap/find_7_3"
+         android:text="家电清洗"
+         android:textSize="13dp"
+
+         />
+     <Button
+         style="@style/find_7_button"
+         android:drawableBottom="@mipmap/find_7_2"
+         android:text="洗车保养"
+         android:textSize="13dp"
+
+         />
+     <Button
+         style="@style/find_7_button"
+         android:drawableBottom="@mipmap/find_7_1"
+         android:text="更多"
+         android:textSize="13dp"
+
+         />
+
+    </LinearLayout>
+   </HorizontalScrollView>
+
+      <TableLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="5dp">
+
+          <TableRow
+              android:layout_marginBottom="1dp">
+
+              <Button
+
+                  android:drawableTop="@mipmap/find_4_1"
+                  android:text="全职招聘"
+                  android:textSize="13dp"
+                  android:layout_marginRight="1dp"
+
+                  android:background="@color/colorwhite"
+                  />
+
+              <Button
+
+                  android:drawableTop="@mipmap/find_4_2"
+                  android:text="兼职"
+                  android:textSize="13dp"
+
+                  android:background="@color/colorwhite"
+                  />
+
+
+          </TableRow>
+
+          <TableRow>
+
+              <Button
+
+                  android:drawableTop="@mipmap/find_4_3"
+                  android:text="志愿者活动"
+                  android:textSize="13dp"
+                  android:layout_marginRight="1dp"
+                  android:background="@color/colorwhite"
+                  />
+
+              <Button
+
+                  android:drawableTop="@mipmap/find_4_4"
+                  android:text="福利工作"
+                  android:textSize="13dp"
+
+                  android:background="@color/colorwhite"
+                  />
+
+
+          </TableRow>
+      </TableLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="1dp"
+       android:background="@color/colorwhite">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:text="便民工具"
+        android:gravity="center_vertical"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        />
+   </LinearLayout>
+
+   <TableLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_marginTop="1dp"
+       android:background="@color/colorwhite">
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_01"
+         android:text="景点门票"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_02"
+         android:text="彩票"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_03"
+         android:text="工资计算"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_04"
+         android:text="房贷计算"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_05"
+         android:text="交通出行"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_06"
+         android:text="职业测评"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_07"
+         android:text="违章查询"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_08"
+         android:text="百元理财"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_09"
+         android:text="信用贷款"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+
+     <Button
+         style="@style/surroundbtn"
+         android:drawableTop="@mipmap/find_bm_xiao_10"
+         android:text="便民打车"
+         android:textSize="13dp"
+         android:drawablePadding="10dp"
+         />
+    </TableRow>
+   </TableLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="1dp"
+       android:background="@color/colorwhite"
+       >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:text="猜你喜欢"
+        android:gravity="center_vertical"
+
+        android:layout_marginLeft="10dp"
+        />
+   </LinearLayout>
+   <ListView
+       android:id="@+id/lv_find_used_car"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"></ListView>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:text="查看更多"
+        android:gravity="center"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorwhite"/>
+   </LinearLayout>
+
+  </LinearLayout>
+</ScrollView>
+
+</LinearLayout>
+
+

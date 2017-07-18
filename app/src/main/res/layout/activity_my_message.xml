@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="china.test.ui.MyMessageActivity">
+
+
+    <!--头布局-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:background="@color/apptheme">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="36px"
+            android:paddingRight="60px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_common_title_back" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/view1"
+                style="@style/app_top_common_title_stytle"
+                android:text="我的消息" />
+
+            <TextView
+                android:id="@+id/tv_message_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="44px"
+                android:textColor="#fff"
+                android:layout_marginLeft="10px"
+                android:text="(99+)" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipelayout_message"
+    android:layout_width="match_parent"
+    android:background="#e8e8e8"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+</android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+    
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/colorwhite"
+    android:layout_marginTop="5dp"
+    >
+
+
+    <TextView
+        android:id="@+id/weatheritem_tv_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="海淀区"
+        android:textColor="@color/colorblack"
+        android:layout_above="@+id/weatheritem_tv_airquality"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"></TextView>
+
+    <TextView
+        android:id="@+id/weatheritem_tv_turnovertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1分钟前"
+        android:textColor="@color/colorgray"
+        android:layout_below="@+id/weatheritem_tv_place"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/weatheritem_tv_airquality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="空气质量：良"
+        android:textColor="@color/colorgray"
+        android:layout_alignBaseline="@+id/weatheritem_tv_temperature"
+        android:layout_alignBottom="@+id/weatheritem_tv_temperature"
+        android:layout_toRightOf="@+id/weatheritem_tv_du"
+        android:layout_toEndOf="@+id/weatheritem_tv_du" />
+
+    <TextView
+        android:id="@+id/weatheritem_tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="天气"
+        android:textColor="@color/colorblack"
+        android:layout_above="@+id/weatheritem_tv_airquality"
+        android:layout_toRightOf="@+id/weatheritem_tv_du"
+        android:layout_toEndOf="@+id/weatheritem_tv_du" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/weatheritem_iv_weather"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/weatheritem_tv_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="-2"
+        android:textSize="45dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/weatheritem_iv_weather"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatheritem_tv_du"
+        android:text="℃"
+        android:textSize="18dp"
+        android:textAlignment="gravity"
+        android:layout_alignBaseline="@+id/weatheritem_tv_weather"
+        android:layout_alignBottom="@+id/weatheritem_tv_weather"
+        android:layout_toRightOf="@+id/weatheritem_tv_temperature"
+        android:layout_marginRight="5dp" />
+
+
+</RelativeLayout>

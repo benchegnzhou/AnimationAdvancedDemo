@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="114px"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:text="房屋信息"
+        android:gravity="center"
+        android:textColor="#4e4e4e"
+        android:textSize="42px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/tv_name"
+        android:background="#e8e8e8"></View>
+</com.zhy.autolayout.AutoRelativeLayout>

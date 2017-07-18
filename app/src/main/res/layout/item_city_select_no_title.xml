@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#FFF"
+    android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/home_city_no_tittle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/tv_title"
+    android:padding="40px"
+    android:text="城市名称"
+    android:textColor="#88000000"
+    android:textSize="45px"/>
+    <!--分割线-->
+    <TextView
+        android:layout_below="@id/home_city_no_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="#e8e8e8" />
+</com.zhy.autolayout.AutoRelativeLayout>

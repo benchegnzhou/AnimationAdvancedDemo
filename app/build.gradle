@@ -1,0 +1,268 @@
+apply plugin: 'com.android.application'
+
+//无侵入式工具-SmartTool 依赖
+//apply plugin: 'wolearn.ajcplugin'
+
+android {
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    /*  signingConfigs {
+          config {
+              keyAlias '123456'
+              keyPassword '123456'
+              storeFile file('D:/ZTProject_House/Doc/apk_sign/a.jks')
+              storePassword '123456'
+
+          }
+      }*/
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+
+        //方法过多google提供的分包解决方案   参考 https://yq.aliyun.com/articles/12429
+        multiDexEnabled true
+        applicationId "com.ztsc.house"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //指定编译的ABIs  参考链接：http://blog.csdn.net/vhawk/article/details/49964475 和 http://www.open-open.com/lib/view/open1440421271716.html
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+
+        manifestPlaceholders = [CHANNEL_NAME: "channel_name"]
+    }
+
+
+
+    signingConfigs {
+        debug {
+            /* storeFile file("appSecretKey.jks")
+             storePassword "123456789"
+             keyAlias "zhengtushenghuo"
+             keyPassword "123456789"*/
+           /* keyAlias '123456'
+            keyPassword '123456'
+            storeFile file('D:/ZTProject_House/Doc/apk_sign/a.jks')
+            storePassword '123456'*/
+        }
+
+        release {
+            storeFile file("appSecretKey.jks")
+            storePassword "123456789"
+            keyAlias "zhengtushenghuo"
+            keyPassword "123456789"
+        }
+    }
+
+
+
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "TOAST_DEBUG", "true"
+            //测试环境的主机地址
+//            buildConfigField "String", "HOST_SERVICE", "\"http://192.168.1.80:9090/house\""
+            buildConfigField "String", "HOST_SERVICE", "\"http://192.168.1.96:8080/ZtscApp/Service\""
+//            buildConfigField "String", "HOST_SERVICE", "\"http://192.168.1.80:8080/ZtscApp/Service\""
+            //王松一电脑
+//              buildConfigField "String", "HOST_SERVICE", "\"http://192.168.1.109:8080/Service\""
+            //辉哥电脑
+//              buildConfigField "String", "HOST_SERVICE", "\"http://192.168.1.23:8080/Service\""
+            //鵬哥电脑
+//              buildConfigField "String", "HOST_SERVICE", "\"http://192.168.1.104:8080/ZtscApp/Service\""
+
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            //替换版本正式的上线主机地址
+            buildConfigField "String", "HOST_SERVICE", "\"http://192.168.1.96:8080/ZtscApp/Service\""
+            debuggable true
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+//            zipAlignEnabled true
+            // 移除无用的resource文件
+//            shrinkResources true
+            //日志开关
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "TOAST_DEBUG", "true"
+        }
+    }
+
+
+    repositories {
+        flatDir {
+            dirs 'libs', 'arcgis'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+    sourceSets {
+        main {
+            //jni库的调用会到资源文件夹下libs里面找so文件
+            jniLibs.srcDirs = ['libs', 'arcgis'];
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+
+
+    productFlavors {
+        /* zhengtushenghuo {}
+         _91store {}
+         _360 {}*/
+        baidu {        }
+        /*  xiaomi {}
+          wandoujia {}
+          yingyongbao {}
+          coolchuan {}
+          anzhi {}
+          huawei {}
+          samsung {}
+
+          anzhuo {}
+          vivo {}
+          oppo {}
+          lenovo {}
+          meizu {}
+          jinli {}
+          tianyi {}
+          yidongMM {}
+          mumayi {}*/
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    // 自定义输出配置，这里我们加上APK版本号1.0
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                // 输出apk名称为wooyun_v1.0_wandoujia.apk
+                def fileName = "zhengtu_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+    }
+}
+
+
+//下面的代码是需要添加的
+/*packagingOptions {
+    exclude 'META-INF/LICENSE'  //这一行可能需要根据你发生冲突的文件不同而改变，但语法不会变
+}*/
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile('com.android.support:appcompat-v7:24.2.1') {
+        exclude module: 'support-annotations'
+    }
+    compile('com.android.support:support-v4:24.2.1') {
+        exclude module: 'support-annotations'
+    }
+    //单张照片选择
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //------------------------这个是注解类的依赖-------------------------------
+    // ---------------------- 图片框架 ----------------------------
+    //调试工具smarttoolui
+    //compile 'com.transfar:smarttoolui:1.0.0'
+    //友盟依赖
+    compile project(':PushSDK')
+    //方法过多google提供的分包解决方案   参考 https://yq.aliyun.com/articles/12429   和  http://blog.csdn.net/gulihui890411/article/details/48551551
+    compile 'com.android.support:multidex:'
+    //百分比适配
+    compile project(':baserecyclerviewlibrary')
+    //环信
+    compile files('libs/hyphenatechat_3.2.3.jar')
+    //加密
+    compile files('libs/sunjce_provider.jar')
+    compile 'com.blankj:utilcode:1.4.1'
+    testCompile 'junit:junit:4.12'
+    //    compile project(':EventBus')
+    compile project(':picture_library')
+    compile project(':easypermissions')
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.android.support:recyclerview-v7:24+'
+    compile 'com.android.support:design:24+'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.facebook.fresco:fresco:0.10.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.zhy:autolayout:1.4.3'
+    compile 'com.android.support:cardview-v7:24+'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:support-v4:24+'
+    compile 'com.jude:rollviewpager:1.2.9'
+    compile 'com.githang:status-bar-compat:0.3'
+    //最新图片压缩框架
+    compile project(':tiny')
+    //内存泄漏检测
+    // LeakCanary  参考链接：https://www.liaohuqiu.net/cn/posts/leak-canary-read-me/
+    //第三方工具库 参考链接： https://github.com/Blankj/AndroidUtilCode
+    //loading状态库       参考链接： https://github.com/zzz40500/android-shapeLoadingView
+    compile project(':shapeloading')
+    compile project(':pulltorefreshlibrary')
+    //网络缓存添加
+    /* localCompile project(path: ':dualcache-library')
+                                    localCompile project(path: ':dualcache-jsonserializer')
+                                    remoteCompile "com.vincentbrison.openlibraries.android:dualcache:${project.dualcacheVersion}"
+                                    remoteCompile "com.vincentbrison.openlibraries.android:dualcache-jsonserializer:${project.dualcacheVersion}"
+                                */
+    compile project(':swipemenulib')
+    //    compile 'com.github.chrisbanes.photoview:library:+'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    compile project(':photoview')
+    //Android数据库 下面4个  参考链接 http://blog.csdn.net/lmj623565791/article/details/39122981 和 http://blog.csdn.net/lmj623565791/article/details/39121377
+    //官网 http://ormlite.com/releases/  博客 http://blog.csdn.net/da_caoyuan/article/details/61414626
+    //    compile files('libs/ormlite-android-5.0-sources.jar')
+    compile files('libs/ormlite-android-5.0.jar')
+    compile files('libs/ormlite-core-5.0.jar')
+    compile project(':okgo')
+    compile 'com.readystatesoftware.chuck:library:1.0.4'
+    compile project(':slidingmenu_library')
+}
+
+

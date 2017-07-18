@@ -1,0 +1,78 @@
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:background="@color/apptheme">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="36px"
+            android:paddingRight="60px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_common_title_back" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_choose"
+            android:layout_width="400px"
+            android:layout_height="80px"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_conversation"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_margin="0px"
+                android:layout_weight="1"
+                android:background="@drawable/my_friends_radiogroup_selector_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="0px"
+                android:text="会话"
+                android:textColor="@color/apptheme" />
+
+            <RadioButton
+                android:id="@+id/rb_friends"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_margin="0px"
+                android:layout_weight="1"
+                android:background="@drawable/my_friends_radiogroup_selector_right"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0px"
+                android:text="好友"
+                android:textColor="#fff" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="20px"
+            android:src="@mipmap/attention_add_icon" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_bar">
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

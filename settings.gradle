@@ -1,0 +1,2 @@
+include ':app', ':PushSDK', ':baserecyclerviewlibrary', ':picture_library', ':easypermissions', ':shapeloading', ':pulltorefreshlibrary', ':swipemenulib', ':tiny', ':photoview', ':okgo'
+include ':slidingmenu_library'

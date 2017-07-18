@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_mchat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:background="@color/apptheme">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/tv_tousername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="对话人"
+            android:textSize="53px"
+            android:textColor="#fff" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/edit_place"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_alignParentBottom="true"
+        android:background="#fff">
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="260px"
+            android:layout_height="100px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="36px"
+            android:background="@drawable/chat_btn_send"
+            android:padding="0dp"
+            android:text="发送"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/et_msgedit"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36px"
+            android:layout_toLeftOf="@id/btn_send"
+            android:background="@drawable/chat_edittext"
+            android:hint="请输入文字。。"
+            android:textColorHint="#e8e8e8"
+            android:textColor="#b2b2b2"
+            android:textSize="37px"
+            android:paddingLeft="30px"
+            />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/edit_place"
+        android:layout_below="@id/rl_1"
+        android:background="#EBECF0">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl_pulltoloadmore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ListView
+                android:id="@+id/lv_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#E8E8E8"></ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="china.test.ui.TestActivity">
+
+    <Button
+    android:id="@+id/btn_net_test"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="网络连接测试"/>
+    <Button
+        android:id="@+id/btn_base64_test"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bsae64加密反解测试"/>
+    <Button
+        android:id="@+id/btn_gson_test"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gson部分文本解析测试"/>
+    <Button
+        android:id="@+id/btn_other_test"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络连接测试"/>
+    <Button
+        android:id="@+id/over_pull_test"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义scrollview 实现平滑过度下拉"/>
+
+    <china.test.customview.WheelView
+        android:id="@+id/pickerview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+</LinearLayout>

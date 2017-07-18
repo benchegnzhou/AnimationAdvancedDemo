@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_backtitle"
+    android:layout_width="match_parent"
+    android:layout_height="156px"
+    android:background="@color/apptheme"
+    android:orientation="horizontal">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="36px"
+            android:paddingRight="60px">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_common_title_back" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_centerInParent="true"
+            style="@style/app_top_common_title_stytle"
+            android:text="标题栏"
+          />
+
+        <TextView
+            android:id="@+id/btn_more"
+            android:text="更多"
+            style="@style/app_top_tltle_right_common_stytle"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginRight="36px"
+            android:visibility="visible" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

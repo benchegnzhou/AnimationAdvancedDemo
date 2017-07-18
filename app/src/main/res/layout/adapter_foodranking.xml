@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorwhite"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:layout_marginTop="1dp"
+    >
+
+    <TextView
+        android:id="@+id/foodranking_Tv_personpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥500"
+        android:textColor="@color/colorLightRed"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="人均\t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_alignBaseline="@+id/foodranking_Tv_personpay"
+        android:layout_alignBottom="@+id/foodranking_Tv_personpay"
+        android:layout_toLeftOf="@+id/foodranking_Tv_personpay"
+        android:layout_toStartOf="@+id/foodranking_Tv_personpay" />
+
+    <TextView
+        android:id="@+id/foodranking_Tv_label"
+        android:text="唤醒味蕾的地道美食"
+        android:textSize="13dp"
+        android:textColor="@color/colororange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/foodranking_NIV_showphoto"
+        android:layout_alignLeft="@+id/foodranking_Tv_restaurant"
+        android:layout_alignStart="@+id/foodranking_Tv_restaurant" />
+
+    <TextView
+        android:id="@+id/foodranking_Tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.2km"
+        android:layout_alignBottom="@+id/foodranking_Tv_label"
+        android:layout_alignRight="@+id/foodranking_Tv_personpay"
+        android:layout_alignEnd="@+id/foodranking_Tv_personpay"></TextView>
+
+    <TextView
+        android:id="@+id/foodranking_Tv_restaurant"
+        android:text="清欢海鲜自助火锅"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/foodranking_NIV_showphoto"
+        android:layout_toRightOf="@+id/foodranking_NIV_showphoto"
+        android:layout_toEndOf="@+id/foodranking_NIV_showphoto" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/foodranking_NIV_showphoto"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dp"
+        />
+</RelativeLayout>

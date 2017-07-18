@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#e8e8e8"
+    >
+
+
+    <!--头布局-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:background="@color/apptheme">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="36px"
+            android:paddingRight="60px">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_common_title_back" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_tittle"
+            style="@style/app_top_common_title_stytle"
+            android:text="求助订单" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <!--参考链接http://www.jianshu.com/p/2b2bb6be83a8-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs_service_change"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:background="#fff"
+        app:tabIndicatorColor="@color/apptheme"
+        app:tabMode="scrollable"
+        android:layout_below="@id/rl_bar"
+        app:tabSelectedTextColor="@color/apptheme"
+        app:tabTextColor="#b2b2b2"
+        app:tabMinWidth="10px"
+        app:tabTextAppearance="@style/LoginTabLayoutTextStyle"
+        android:layout_marginBottom="1px"
+        />
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabs_service_change">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_null"
+                android:layout_width="180px"
+                android:layout_height="180px"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/testwelcome" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_null"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="   您还没有相关订单\n快去寻找附近的服务吧" />
+        </RelativeLayout>
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_help_orders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="156px"
+        android:background="@color/apptheme">
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="36px"
+            android:paddingRight="60px">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_common_title_back" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/app_top_common_title_stytle"
+            android:gravity="center"
+            android:text="设置" />
+
+        <TextView
+            android:id="@+id/btn_more"
+            style="@style/app_top_tltle_right_common_stytle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="36px"
+            android:gravity="center"
+            android:paddingLeft="60px"
+            android:text="上报设施"
+            android:visibility="gone" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/set_rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:background="#fff">
+
+        <TextView
+            style="@style/me_setting_left_text_style"
+            android:text="消息推送" />
+
+        <ImageView
+            android:id="@+id/iv_ismsgpush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/set_rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="1px"
+        android:background="#fff">
+
+        <TextView
+            style="@style/me_setting_left_text_style"
+            android:text="关于我们" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/set_rl_3"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="1px"
+        android:background="#fff">
+
+        <TextView
+            style="@style/me_setting_left_text_style"
+            android:text="意见反馈"
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/set_rl_4"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="10px"
+        android:background="#fff">
+
+        <TextView
+            style="@style/me_setting_left_text_style"
+            android:text="版本信息" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="1.0版本"
+            android:textColor="#b2b2b2"
+            android:textSize="42px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/set_rl_5"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="1px"
+        android:background="#fff">
+
+        <TextView
+            style="@style/me_setting_left_text_style"
+            android:text="清除缓存" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="0KB"
+            android:textColor="#b2b2b2"
+            android:textSize="42px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/set_rl_6"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_marginTop="1px"
+        android:background="#fff">
+
+        <TextView
+            style="@style/me_setting_left_text_style"
+            android:text="检查更新" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="检测版本"
+            android:textColor="#b2b2b2"
+            android:textSize="42px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

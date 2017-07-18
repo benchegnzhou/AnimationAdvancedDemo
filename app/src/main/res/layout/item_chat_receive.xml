@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    >
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="112px"
+            android:layout_height="112px"
+            android:layout_marginLeft="36px"
+            android:layout_marginTop="36px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/default_avatar"
+            android:background="#fff"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_chatcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:background="@drawable/chat2"
+            android:maxWidth="200dp"
+            android:gravity="left|top"
+            android:layout_marginTop="36px"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:padding="30px"
+            android:textColor="#ff000000"
+            android:textSize="15sp" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

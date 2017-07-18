@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.ztsc.house.ui.SignActivity">
+<Button
+    android:id="@+id/btn_sign_in"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="签到"
+    />
+<Button
+    android:id="@+id/btn_sign_out"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="签退"
+    />
+
+    <TextView
+        android:id="@+id/tv_infomation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"/>
+</com.zhy.autolayout.AutoLinearLayout>
